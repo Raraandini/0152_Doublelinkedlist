@@ -104,6 +104,16 @@ public:
             cout << "Record not found" << endl;
             return;
         }
+        // Step 2: if node is at the beginning
+        if(Current == START)
+        {
+            START = Current->next; // Step 2a: START = START.next
+            if(START != NULL)
+            {
+                START->prev - NULL; // step 2b: START.prev = NULL
+            }
+        }
+       
 
 
     }
