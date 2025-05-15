@@ -133,5 +133,8 @@ public:
         cout << "\nList is empty\n" << endl;
         return;
     }
+    
+     // Step 1: Mark first node as currentNode
+    Node* currentNode = START;
     }
  };
