@@ -143,7 +143,7 @@ public:
      int i = 0;
      while (currentNode != NULL)
      {
-        cout << i + 1 << ". " << currentNode->rollNo << endl;
+        cout << i + 1 << ". " << currentNode->noMhs << endl;
         i++;
         // Step 3: Move to next node
         currentNode = currentNode->next;
@@ -171,7 +171,7 @@ public:
     cout << "\nRecords in descending order of roll number are:\n";
     while (currentNode != NULL) 
     {
-        cout << i + 1 << ". " << currentNode->rollNo << endl;
+        cout << i + 1 << ". " << currentNode->noMhs << endl;
         i++;
         // Step 3: Move to previous node
         currentNode = currentNode->prev;
@@ -204,6 +204,33 @@ void searchData()
     else
     {
         cout << "Record found\n";
+        cout << "Roll Number: " << current->noMhs << endl;
     }
   }
 };
+
+int main()
+{
+    DoubleLinkedList list;
+    char choice;
+
+    do
+    {
+
+        cout << "\nMenu:\n";
+        cout << "1. Add Record\n";
+        cout << "2. Delete Record\n";
+        cout << "3. View Ascending\n";
+        cout << "4. View Descending\n";
+        cout << "5. Search Record\n";
+        cout << "6. Exit\n";
+        cout << "Enter your choice: ";
+
+        cin >> choice;
+
+        switch (choice)
+        {
+        case '1':
+            list.addNode();
+            break;
+        }
