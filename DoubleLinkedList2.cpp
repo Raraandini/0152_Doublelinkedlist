@@ -72,7 +72,10 @@ public:
         // step 9: Insert between Currnet and Current->next
         newNode->next = Current->next; // step 9a: newNode.next = Current.next
         newNode->prev = Current;       // step 9b newNode.prev = Current
-        
-        
+
+        // insert last node
+        if(Current->next != NULL)
+            Current->next->prev - newNode;  // step 9c: Current.next.prev = newNode
+        Current->next = newNode; // step 9d: Current.next = newNode
     }
 };
