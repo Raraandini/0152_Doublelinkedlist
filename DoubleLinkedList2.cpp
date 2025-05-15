@@ -129,31 +129,52 @@ public:
     }
     void traverse() 
     {
-    if (START == NULL) {
+    if (START == NULL)
+     {
         cout << "\nList is empty\n" << endl;
         return;
-    }
+     }
 
      // Step 1: Mark first node as currentNode
-    Node* currentNode = START;
+     Node* currentNode = START;
 
-    // Step 2: Repeat until currentNode == NULL
-    cout << "\nRecords in ascending order of roll number are:\n";
-    int i = 0;
-    while (currentNode != NULL)
+     // Step 2: Repeat until currentNode == NULL
+     cout << "\nRecords in ascending order of roll number are:\n";
+     int i = 0;
+     while (currentNode != NULL)
      {
         cout << i + 1 << ". " << currentNode->rollNo << endl;
         i++;
         // Step 3: Move to next node
         currentNode = currentNode->next;
-        }
+        i++;
+    }
  }
 
- void reverseTraverse()
+ void revtraverse()
   {
     if (START == NULL) 
     {
         cout << "\nList is empty\n" << endl;
         return;
     }
-  }
+    // Step 1: Move to last node
+    Node* currentNode = START;
+    int i = 0;
+    while (currentNode->next != NULL)
+    {
+        currentNode = currentNode->next;
+        i++;
+    }
+
+    // Step 2: Traverse backward
+    cout << "\nRecords in descending order of roll number are:\n";
+    while (currentNode != NULL) 
+    {
+        cout << i + 1 << ". " << currentNode->rollNo << endl;
+        i++;
+        // Step 3: Move to previous node
+        currentNode = currentNode->prev;
+        i--;
+    }
+}
