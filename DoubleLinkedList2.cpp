@@ -140,10 +140,20 @@ public:
     // Step 2: Repeat until currentNode == NULL
     cout << "\nRecords in ascending order of roll number are:\n";
     int i = 0;
-    while (currentNode != NULL) {
+    while (currentNode != NULL)
+     {
         cout << i + 1 << ". " << currentNode->rollNo << endl;
         i++;
         // Step 3: Move to next node
         currentNode = currentNode->next;
+        }
+ }
+
+ void reverseTraverse()
+  {
+    if (START == NULL) 
+    {
+        cout << "\nList is empty\n" << endl;
+        return;
     }
- };
+  }
