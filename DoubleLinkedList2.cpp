@@ -143,6 +143,7 @@ public:
     while (currentNode != NULL) {
         cout << i + 1 << ". " << currentNode->rollNo << endl;
         i++;
-       
+        // Step 3: Move to next node
+        currentNode = currentNode->next;
     }
  };
