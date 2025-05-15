@@ -54,6 +54,20 @@ public:
             START = newNode;
             return;
         }
+
+        // insert in between node
+        // step 8: Locate position for insertion
+        Node *Current = START;
+        while (Current->next != NULL && Current->next->noMhs < nim)
+        {
+            Current = Current->next;
+        }
+
+        if (Current->next != NULL && nim == Current->next->noMhs)
+        {
+            cout << "\nDuplicate roll numbers not allowed" << endl;
+            return;
+        }
         
     }
 };
