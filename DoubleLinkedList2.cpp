@@ -78,4 +78,21 @@ public:
             Current->next->prev - newNode;  // step 9c: Current.next.prev = newNode
         Current->next = newNode; // step 9d: Current.next = newNode
     }
+
+    void hapus()
+    {
+        if (START == NULL)
+        { 
+            cout << "\nList is empty" << endl;
+            return;
+        }
+
+        cout << "\nMasukkan NIM yang akan dideleted";
+        int rollNo;
+        cin >> rollNo;
+
+        Node *Current = START;
+
+        
+    }
 };
